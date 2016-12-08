@@ -7,6 +7,12 @@ import java.util.Iterator;
 /**
 * The following class implements the plagiarism Checker. My algorithm for this program 
 * can be found in README.md. 
+* Exit codes: 
+* -1 - invalid number of arguments
+* 2 - file not found
+* 3 - Exception in building tupleset in SourceFile class
+* 4 - Exception in hasNextTuple() of TestFile class
+* 5 - Exception in buildNewVocabulary() method of Vocabulary class
 * @author Abhay Mittal
 */
 public class PlagChecker {

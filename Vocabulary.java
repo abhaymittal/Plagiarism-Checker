@@ -55,7 +55,7 @@ public class Vocabulary {
 	}
 	catch(FileNotFoundException ex) { //If file not found
 	    System.out.println("The file "+filePath+" was not found on the system. Please verify if the file exists and run again.");
-	    System.exit(1);
+	    System.exit(2);
 	}
 	catch(Exception ex) { // in case any other exception occurs
 	    System.out.println("An exception occured: "+ex.getMessage());
@@ -66,7 +66,7 @@ public class Vocabulary {
 	    catch (IOException exp) {
 		System.out.println("An exception occured in closing buffered reader for Vocabulary: "+exp.getMessage());
 	    }
-	    System.exit(2);
+	    System.exit(5);
 	}
     }
 

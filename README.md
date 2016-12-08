@@ -17,6 +17,14 @@ java PlagChecker <synonymFile> <sourceFile> <testFile> [<tupleSize>]
 <tupleSize>   : (Optional) The size of the tuples for comparison. Default size is 3 words.
 
 --------------------------------------------------------------------------------
+Exit codes: 
+-1 - invalid number of arguments
+2 - file not found
+3 - Exception in building tupleset in SourceFile class
+4 - Exception in hasNextTuple() of TestFile class
+5 - Exception in buildNewVocabulary() method of Vocabulary class
+
+--------------------------------------------------------------------------------
 ### Algorithm:
 1. Read the synonyms file line by line and build a HashMap with words as keys and the line numbers as values, thus all the words which are on the same line  (synonyms) get the same value.
 2. Implement an encoding scheme which takes a tuple as an input and returns a string encoding for the tuple. Basically, replace each word in the tuple by its value from the HashMap in step 1 and then separate all the numbers by spaces and use it as encoding.
@@ -28,8 +36,10 @@ __Note__: Punctuations are ignored, that is, they are not taken into account whi
 
 --------------------------------------------------------------------------------
 ### Assumptions
-1. The number of words in first line of the test file must be atleast equal to the tuple size. It was necessary to do this for the hasNext() method in the TestFile class.
+1. The number of words in first line of the test file must be atleast equal to the tuple size. It was necessary to do this for the hasNext() method in the TestFile class. 
 
 --------------------------------------------------------------------------------
 ### Limitations
 1. The program can not be directly scaled to multiple threads as I have used classes like HashMap and ArrayDeque which require external synchronization methods.
+
+--------------------------------------------------------------------------------

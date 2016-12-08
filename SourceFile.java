@@ -49,7 +49,7 @@ public class SourceFile {
 	}
 	catch(FileNotFoundException ex) { //if the file not present
 	    System.out.println("The file "+filePath+" was not found on the system. Please verify if the file exists and run again.");
-	    System.exit(1);
+	    System.exit(2);
 	}
 	this.filePath=filePath; //set the file path
     }

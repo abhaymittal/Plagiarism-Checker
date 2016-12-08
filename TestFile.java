@@ -58,7 +58,7 @@ public class TestFile {
 	}
 	catch(FileNotFoundException ex) {
 	    System.out.println("The file "+filePath+" was not found on the system. Please verify if the file exists and run again.");
-	    System.exit(1);
+	    System.exit(2);
 	}
 	
 	this.filePath=filePath; //set the file path if the file exists
@@ -91,7 +91,7 @@ public class TestFile {
 		catch (IOException exp) {
 		    System.out.println("An exception occured in closing buffered reader for Test file: "+exp.getMessage());
 		}
-		System.exit(2);	   
+		System.exit(4);	   
 	    }
 	    
 	    if(line==null) //if we reach the end of the file
