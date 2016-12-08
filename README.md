@@ -17,12 +17,13 @@ java PlagChecker <synonymFile> <sourceFile> <testFile> [<tupleSize>]
 <tupleSize>   : (Optional) The size of the tuples for comparison. Default size is 3 words.
 
 --------------------------------------------------------------------------------
-Exit codes: 
--1 - invalid number of arguments
-2 - file not found
-3 - Exception in building tupleset in SourceFile class
-4 - Exception in hasNextTuple() of TestFile class
-5 - Exception in buildNewVocabulary() method of Vocabulary class
+Exit codes | Meaning
+-----------|------------
+-1         | invalid number of arguments
+2          | file not found
+3          | Exception in building tupleset in SourceFile class
+4          | Exception in hasNextTuple() of TestFile class
+5          | Exception in buildNewVocabulary() method of Vocabulary class
 
 --------------------------------------------------------------------------------
 ### Algorithm:
